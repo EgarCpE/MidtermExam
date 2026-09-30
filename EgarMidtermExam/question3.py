@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdit 
 
-
+# Function required to display the name 
 def displayName():
     name = inputName.text()
     outputName.setText(name)
@@ -9,19 +9,24 @@ def displayName():
 
 app = QApplication(sys.argv)
 
+# creates the window
 window = QWidget()
 window.setWindowTitle("Midterm in OOP")
 window.setGeometry(400, 500, 750, 400)
 
+# creates the Label
 label = QLabel("Enter your fullname", window)
 label.setGeometry(100, 120, 200, 30)
 
+# creates the Input box
 inputName = QLineEdit(window)
 inputName.setGeometry(400, 115, 300, 40)
 
+# creates the button
 button = QPushButton("Click to display your fullname", window)
 button.setGeometry(100, 180, 250, 40)
 
+# creates the label for needed output
 outputName = QLabel("", window)
 outputName.setGeometry(400, 180, 300, 40)
 
