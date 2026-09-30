@@ -10,11 +10,13 @@ def main():
 	class CelsiusToKelvin(TemperatureConversion):
 		def conversion(self):
 			return self._temp + 273.15
-
-	class FahrenheitToKelvin(TemperatureConversion):
+			
+# Added conversion based on the requirements sa question Fahren To Kelvin
+	class FahrenheitToKelvin(TemperatureConversion): 
 		def conversion(self):
 			return (self._temp - 32) * 5 / 9 + 273.15
 
+# Kelvin To celsius
 	class KelvinToCelsius(TemperatureConversion):
 		def conversion(self):
 			return self._temp - 273.15
